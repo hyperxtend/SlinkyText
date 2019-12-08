@@ -1,0 +1,147 @@
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+section{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background: #000200;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+}
+ section  .star{
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100%;
+ 	height: 100%;
+ 	pointer-events: none;
+ 	animation: starry 8s ease-in-out infinite, starFade 16s linear infinite;
+ }
+
+ section .star.star1{
+ 	animation-delay: 0s;
+ 	background: url(star1.png); 
+ }
+ section .star.star2{
+ 	animation-delay: -1s;
+ 	background: url(star2.png); 
+ }
+  section .star.star3{
+ 	animation-delay: -2s;
+ 	background: url(star3.png); 
+ }
+  section .star.star4{
+ 	animation-delay: -3s;
+ 	background: url(star4.png); 
+ }
+  section .star.star5{
+ 	animation-delay: -4s;
+ 	background: url(star5.png); 
+ }
+  section .star.star6{
+ 	animation-delay: -5s;
+ 	background: url(star6.png); 
+ }
+  section .star.star7{
+ 	animation-delay: 6s;
+ 	background: url(star7.png); 
+ }
+ @keyframes starry{
+ 	20%,40%,60%,80%,100%{
+ 		opacity: 0;
+	}
+ 	10%,30%,50%,70%,90%
+ 	{
+ 		opacity: 1;
+	}
+
+ }
+@keyframes starFade{
+	0%{
+	transform: scale(1);
+
+	}100%{
+	transform: scale(2);
+	}
+}
+.slinky{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.slinky h2 {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-size:  5.5em;
+	color: #fff;
+	-webkit-text-stroke: 2px #000;
+	animation: animate ease-in-out 6.5s infinite;	
+}
+
+.slinky h2:nth-child(1){
+	color: #CF11FF;
+	animation-delay: -0.06s
+}
+.slinky h2:nth-child(2){
+	color: #7600F8;
+	animation-delay: -0.10s
+}
+.slinky h2:nth-child(3){
+	color: #2B13FF;
+	animation-delay: -0.14s
+}
+.slinky h2:nth-child(4){
+	color: #2BCC0A;
+	animation-delay: -0.20s
+}
+.slinky h2:nth-child(5){
+	color: #FDFF09;
+	animation-delay: -0.24s
+}
+.slinky h2:nth-child(6){
+	color: #E75700;
+	animation-delay: -0.28s
+}
+.slinky h2:nth-child(7){
+	color: #DF0000;
+	animation-delay: -0.32s
+}
+.slinky h2:nth-child(8){
+	animation-delay: -0.36s
+}
+
+
+
+@keyframes animate{
+	0%, 100%{
+		top: -70px;
+		left: -180px;
+
+		}25%{
+		top: 70px;
+		left: 180px;
+
+		}50%{
+		top: -70px;
+		left: -180px;
+
+		}75%{
+		top: 70px;
+		left: 180px;
+
+
+		}
+}
